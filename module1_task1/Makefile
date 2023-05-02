@@ -1,6 +1,4 @@
-
-
-built:
+build:
 		hugo
 
 clean:
