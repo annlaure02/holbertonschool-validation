@@ -1,3 +1,6 @@
+lint: ## Should be implemented and should fail when the linter catches and error
+		golangci-lint run
+
 build: ## compile the source code of the application to a binary named awesome-api
 		go build
 
@@ -18,6 +21,3 @@ test: ## ou want to test it to ensure that it behaves as expected
 
 help: ## Prints out the list of targets and their usage
 		@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
-
-lint: ## Should be implemented and should fail when the linter catches and error
-		golangci-lint run
