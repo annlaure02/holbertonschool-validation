@@ -6,7 +6,7 @@
 * Python 3 with pip module
 * golangci-lint 
 
-## Project Life-Cycle
+## Lifecycle
 * build: Compile the source code of the application to a binary named awesome-api.
 * run: Run the application in background by executing the binary awesome-api, and write logs into a file named awesome-api.log.
 * stop: Stop the application with the command kill XXXXX where XXXXX is the Process ID of the application.
