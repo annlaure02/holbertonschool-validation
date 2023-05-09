@@ -2,6 +2,7 @@ lint: ## Should be implemented and should fail when the linter catches and error
 		golangci-lint run
 
 build: ## compile the source code of the application to a binary named awesome-api
+		golangci-lint run
 		go build
 
 run: ## Run the application in background by executing the binary awesome-api, and write logs into a file named awesome-api.log
