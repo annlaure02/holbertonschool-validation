@@ -17,13 +17,13 @@ clean: ## Stop the application. Delete the binary awesome-api and the log file a
 
 test: ## To test it to ensure that it behaves as expected
 		go test -v -short -coverprofile=coverage-units.out
-		go test -v -short -coverprofile=coverage-integrations.out
+		go test -v -coverprofile=coverage-integrations.out
 
 unit-tests: ## should be implemented and should execute (successfully) the Golang unit tests
 		go test -v -short -coverprofile=coverage-units.out
 
 integration-tests: ## should be implemented and should execute (successfully) the Golang integration tests
-		go test -v -short -coverprofile=coverage-integrations.out
+		go test -v -coverprofile=coverage-integrations.out
 
 help: ## Prints out the list of targets and their usage
 		@fgrep -h "##" $(MAKEFILE_LIST) | fgrep -v fgrep | sed -e 's/\\$$//' | sed -e 's/##//'
