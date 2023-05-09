@@ -9,7 +9,7 @@ run: ## Run the application in background by executing the binary awesome-api, a
 		./awesome-api >./awesome-api.log 2>&1 &
 
 stop: ## Stop the application with the command kill XXXXX where XXXXX is the Process ID of the application.
-		pkill awesome-api
+		pkill awesome-api || true
 
 clean: ## Stop the application. Delete the binary awesome-api and the log file awesome-api.log
 		pkill awesome-api || true
