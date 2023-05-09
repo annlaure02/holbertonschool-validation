@@ -13,4 +13,5 @@
 * stop: Stop the application with the command kill XXXXX where XXXXX is the Process ID of the application.
 * clean: Stop the application. Delete the binary awesome-api and the log file awesome-api.log.
 * test: You want to test it to ensure that it behaves as expected.
+* unit-tests: Should be implemented and should execute (successfully) the Golang unit tests
 * help: Prints out the list of targets and their usage.
