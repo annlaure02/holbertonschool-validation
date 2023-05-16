@@ -13,6 +13,9 @@ sudo tar -C /usr/local -xzf go1.15.14.linux-amd64.tar.gz
 export PATH=$PATH:/usr/local/go/bin
 source ~/.profile
 
+# Install golangci-lint
+curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin 
+
 # Install nodejs v14.* and npm v7*
 sudo apt-get install -y nodejs=14.21.3-deb-1nodesource1
 sudo npm install -g npm@7
