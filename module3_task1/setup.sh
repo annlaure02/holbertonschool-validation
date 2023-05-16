@@ -6,11 +6,11 @@ wget https://github.com/gohugoio/hugo/releases/download/v0.84.0/hugo_extended_0.
 sudo tar -zxvf hugo_extended_0.84.0_Linux-64bit.tar.gz
 mv hugo /usr/local/bin
 
-GOLANGCILINT_VERSION="1.52.2"
-curl --silent --show-error --location --output /tmp/golangci-lint.deb \
-     "https://github.com/golangci/golangci-lint/releases/download/v${GOLANGCILINT_VERSION}/golangci-lint-${GOLANGCILINT_VERSION}-linux-amd64.deb"
-sudo dpkg -i /tmp/golangci-lint.deb
-rm -f /tmp/golangci-lint.deb
+# Install golangci-lint
+curl -sSfL https://raw.githubusercontent.com/golangci/golangci-lint/master/install.sh | sh -s -- -b $(go env GOPATH)/bin 
+echo 'export PATH="$(go env GOPATH)/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+
 sudo npm install --global \
   markdownlint-cli@0.26.0 \
   markdown-link-check@3.8.6
