@@ -12,7 +12,11 @@ curl --silent --show-error --location --output /tmp/golangci-lint.deb \
 sudo dpkg -i /tmp/golangci-lint.deb
 rm -f /tmp/golangci-lint.deb
 
-sudo npm install --global \
-  markdownlint-cli@0.26.0 \
-  markdown-link-check@3.8.6
+# Install nodejs v14.* and npm v7*
+sudo apt-get install -y nodejs=14.21.3-deb-1nodesource1
+sudo npm install -g npm@7
+
+# Install markdownlint-cli and 
+sudo npm install -g markdownlint-cli
+sudo npm install -g markdown-link-check
   
