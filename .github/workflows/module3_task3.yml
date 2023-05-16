@@ -1,27 +1,35 @@
 ---
 name: module3_task3
+
 on:
   push:
     branches:
       - master
   schedule:
     - cron: '0 0 * * *'
+
 jobs:
   build:
+    permissions:
+      contents: write
+
     runs-on: ubuntu-22.04
+
     steps:
-      - name: Checkout  # Download code from the repository
+      - name: Checkout
         uses: actions/checkout@v3
-      - name: Run file sh
+
+      - name: Run bash script
         run: cd module3_task3 && ./setup.sh
-      - name: Run make build  # Execute the command make build
+
+      - name: Run make build
         run: cd module3_task3 && make build
+
       - name: Test
         run: |
           cd module3_task3
-          make test
-          make unit-tests
           make integration-tests
+          make unit-tests
           make package
           make clean
 
@@ -35,8 +43,8 @@ jobs:
             module3_task3/awesome-website.zip
             module3_task3/DEPLOY.md
 
-      - name: Archive a ZIP file
+      - name: "archive build"
         uses: actions/upload-artifact@v3
         with:
-          name: Awesome-website.zip
-          path: module3_task2/awesome-website.zip
+          name: "upload package"
+          path: module3_task3/awesome-website.zip
