@@ -1,6 +1,6 @@
 #!/bin/bash
 # Install make and wget
-sudo apt-get update && apt-get install -y make wget
+sudo apt-get update && apt-get install -y make wget curl
 
 # Install v0.84.0 of Hugo
 wget https://github.com/gohugoio/hugo/releases/download/v0.84.0/hugo_extended_0.84.0_Linux-64bit.tar.gz
