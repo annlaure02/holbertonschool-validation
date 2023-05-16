@@ -22,6 +22,7 @@ jobs:
           make test
           make unit-tests
           make integration-tests
+          make package
           make clean
       - name: Archive a ZIP file
         uses: actions/upload-artifact@v3
