@@ -19,20 +19,19 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run file sh
-        run: cd module3_task5 && ./setup.sh
+        run: ./setup.sh
 
       - name: Run make build
-        run: cd module3_task5 && make build
+        run: make build
 
       - name: Run make lint
-        run: cd module3_task5 && make lint
+        run: make lint
 
       - name: Run make validate
-        run: cd module3_task5 && make validate
+        run: make validate
 
       - name: Test
         run: |
-          cd module3_task5
           make integration-tests
           make unit-tests
           make package
