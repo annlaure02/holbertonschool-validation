@@ -21,8 +21,14 @@ jobs:
       - name: Run file sh
         run: cd module3_task5 && ./setup.sh
 
-      - name: Run make build 
+      - name: Run make build
         run: cd module3_task5 && make build
+
+      - name: Run make lint
+        run: cd module3_task5 && make lint
+
+      - name: Run make validate
+        run: cd module3_task5 && make validate
 
       - name: Test
         run: |
