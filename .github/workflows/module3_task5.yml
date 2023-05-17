@@ -60,7 +60,7 @@ jobs:
           publish-dir: './dist'
           production-branch: main
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          deploy-message: "🎉 Published on"
+          deploy-message: "🎉 Published on $(date) 🚀 Deployed on $(date)"
           enable-pull-request-comment: false
           enable-commit-comment: true
           overwrites-pull-request-comment: true
